@@ -55,3 +55,5 @@ def processHttpMessage(self, tool, is_request, content):
 ```
 
 The first line checks if the current message is a response, since we don't want to be working with requests in our case. Then the response content is converted from bytes to a string. This will make it easier to work with the response content. The pattern we have made use of is a regular expression that detects IP addresses between (10.0.0.0 to 10.255.255.255), (172.16.0.0 to 172.31.255.255) and (192.168.0.0 to 192.168.255.255). Finally, the built-in python re module (Make sure to import that module as well!) is used to find all occurrences of such patterns in the responses and printed out to Burp's output console.
+
+<img width="959" height="562" alt="extension working" src="https://github.com/user-attachments/assets/d362e37b-bbea-411e-9948-18ea57c1b19c" />
